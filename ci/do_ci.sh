@@ -8,9 +8,10 @@ export PATH=/usr/lib/llvm-7/bin:$PATH
 export ASAN_SYMBOLIZER_PATH=/usr/lib/llvm-7/bin/llvm-symbolizer
 echo "$CC/$CXX toolchain configured"
 
-if [[ -f "${HOME:-/root}/.gitconfig" ]]; then
-    mv "${HOME:-/root}/.gitconfig" "${HOME:-/root}/.gitconfig_save"
-fi
+# NOTE(ywen): Why was it needed to back up the git config?
+# if [[ -f "${HOME:-/root}/.gitconfig" ]]; then
+#     mv "${HOME:-/root}/.gitconfig" "${HOME:-/root}/.gitconfig_save"
+# fi
 
 function do_build () {
     bazel build -s --verbose_failures=true //:envoy
