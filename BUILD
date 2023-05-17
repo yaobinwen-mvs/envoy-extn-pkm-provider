@@ -23,9 +23,9 @@ envoy_cc_library(
     hdrs = ["pkm_provider.h", "pkm_provider_tss.h", "tpm/tpm_key.h", "tpm/tpm_privkey_operator.h", "tpm/tpm_error.h", "util.h"],
     repository = "@envoy",
     deps = [
-        "@envoy//include/envoy/server:transport_socket_config_interface",
-        "@envoy//include/envoy/ssl:tls_certificate_config_interface",
-        "@envoy//include/envoy/ssl/private_key:private_key_config_interface",
+        "@envoy//envoy/server:transport_socket_config_interface",
+        "@envoy//envoy/ssl:tls_certificate_config_interface",
+        "@envoy//envoy/ssl/private_key:private_key_config_interface",
         "@envoy//source/common/common:assert_lib",
         "@envoy//source/common/common:logger_lib",
     ],
