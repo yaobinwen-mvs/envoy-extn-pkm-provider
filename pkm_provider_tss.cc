@@ -194,7 +194,8 @@ void TssPKMPrivateKeyMethodProvider::unregisterPrivateKeyMethod(SSL* ssl) {
 
 
 TssPKMPrivateKeyMethodProvider::TssPKMPrivateKeyMethodProvider(
-    const ProtobufWkt::Struct& config,
+    // const ProtobufWkt::Struct& config,
+    const pkm::PKMProviderConfig& config,
     Server::Configuration::TransportSocketFactoryContext& factory_context) {
 
   ENVOY_LOG_MISC(debug, "TssPKMPrivateKeyMethodProvider::TssPKMPrivateKeyMethodProvider");
@@ -214,6 +215,8 @@ TssPKMPrivateKeyMethodProvider::TssPKMPrivateKeyMethodProvider(
   std::string srk_auth;
   uint8_t srk_auth_sha1[SHA_DIGEST_LENGTH];
 
+  /**
+   * TODO(ywen): Modify this part of code.
   for (auto& value_it : config.fields()) {
     auto& value = value_it.second;
 
@@ -239,6 +242,7 @@ TssPKMPrivateKeyMethodProvider::TssPKMPrivateKeyMethodProvider(
       srk_auth = value.string_value();
     }
   }
+  */
 
   ASSERT(!idkey_file_path.empty(), "idkey fle is empty");
   idkey_contents = factory_context.api().fileSystem().fileReadToEnd(idkey_file_path);
@@ -267,11 +271,11 @@ BoringSslPrivateKeyMethodSharedPtr TssPKMPrivateKeyMethodProvider::getBoringSslP
 
 PrivateKeyMethodProviderSharedPtr
 TssPKMPrivateKeyMethodProviderInstanceFactory::createPrivateKeyMethodProviderInstance(
-    const envoy::api::v2::auth::PrivateKeyProvider& message,
+    const envoy::extensions::transport_sockets::tls::v3::PrivateKeyProvider& config,
     Server::Configuration::TransportSocketFactoryContext& private_key_method_provider_context) {
 
   return PrivateKeyMethodProviderSharedPtr(
-      new TssPKMPrivateKeyMethodProvider(message.config(), private_key_method_provider_context));
+      new TssPKMPrivateKeyMethodProvider(config, private_key_method_provider_context));
 }
 
 

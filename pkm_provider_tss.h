@@ -12,6 +12,8 @@
 #include "envoy/ssl/private_key/private_key.h"
 #include "tpm/tpm_key.h"
 
+#include "pkm_provider_config.pb.h"
+
 namespace Envoy {
 namespace Ssl {
 
@@ -19,7 +21,7 @@ class TssPKMPrivateKeyMethodProviderInstanceFactory
     : public PrivateKeyMethodProviderInstanceFactory {
 public:
   PrivateKeyMethodProviderSharedPtr
-  createPrivateKeyMethodProviderInstance(const envoy::api::v2::auth::PrivateKeyProvider& message,
+  createPrivateKeyMethodProviderInstance(const envoy::extensions::transport_sockets::tls::v3::PrivateKeyProvider& config,
                                          Server::Configuration::TransportSocketFactoryContext&
                                              private_key_method_provider_context) override;
   virtual std::string name() const override { return "pkm_provider_tss"; }
@@ -43,7 +45,8 @@ private:
 class TssPKMPrivateKeyMethodProvider : public PrivateKeyMethodProvider {
 public:
   TssPKMPrivateKeyMethodProvider(
-      const ProtobufWkt::Struct& config,
+      // const ProtobufWkt::Struct& config,
+      const pkm::PKMProviderConfig& config,
       Server::Configuration::TransportSocketFactoryContext& factory_context);
   virtual ~TssPKMPrivateKeyMethodProvider() {}
   virtual BoringSslPrivateKeyMethodSharedPtr getBoringSslPrivateKeyMethod() override;

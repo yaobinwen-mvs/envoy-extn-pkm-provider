@@ -33,7 +33,9 @@ sudo apt-get install \
    patch \
    python3-pip \
    unzip \
-   virtualenv
+   virtualenv \
+   protobuf-compiler \
+   libprotobuf-dev
 ```
 
 ### 2.2 Build

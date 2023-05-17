@@ -123,7 +123,7 @@ void PKMPrivateKeyMethodProvider::unregisterPrivateKeyMethod(SSL* ssl) {
 }
 
 PKMPrivateKeyMethodProvider::PKMPrivateKeyMethodProvider(
-    const ProtobufWkt::Struct& config,
+    const pkm::PKMProviderConfig& config,
     Server::Configuration::TransportSocketFactoryContext& factory_context) {
 
   if (PKMPrivateKeyMethodProvider::ssl_rsa_connection_index == -1) {
@@ -132,6 +132,8 @@ PKMPrivateKeyMethodProvider::PKMPrivateKeyMethodProvider(
   }
 
   std::string private_key_path;
+  /**
+   * TODO(ywen): Modify this part of code.
   for (auto& value_it : config.fields()) {
     auto& value = value_it.second;
     if (value_it.first == "private_key_file" &&
@@ -139,6 +141,7 @@ PKMPrivateKeyMethodProvider::PKMPrivateKeyMethodProvider(
       private_key_path = value.string_value();
     }
   }
+  */
 
   ASSERT(!private_key_path.empty());
 
@@ -171,11 +174,15 @@ bool PKMPrivateKeyMethodProvider::checkFips() {
 
 PrivateKeyMethodProviderSharedPtr
 PKMPrivateKeyMethodProviderInstanceFactory::createPrivateKeyMethodProviderInstance(
-    const envoy::api::v2::auth::PrivateKeyProvider& message,
+    const envoy::extensions::transport_sockets::tls::v3::PrivateKeyProvider& config,
     Server::Configuration::TransportSocketFactoryContext& private_key_method_provider_context) {
 
+  pkm::PKMProviderConfig pkm_provider_config;
+
+  // TODO(ywen): Implement me!
+
   return PrivateKeyMethodProviderSharedPtr(
-      new PKMPrivateKeyMethodProvider(message.config(), private_key_method_provider_context));
+      new PKMPrivateKeyMethodProvider(pkm_provider_config, private_key_method_provider_context));
 }
 
 static Registry::RegisterFactory<PKMPrivateKeyMethodProviderInstanceFactory,
