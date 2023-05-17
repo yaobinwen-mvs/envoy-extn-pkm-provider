@@ -21,6 +21,20 @@ There are two ways to check out the `envoy` submodule:
 
 * bazel: [Installing Bazel on Ubuntu](https://bazel.build/install/ubuntu)
 * libtspi-dev (apt-get install -y libtspi-dev)
+* The following items:
+
+```
+sudo apt-get install \
+   autoconf \
+   cmake \
+   curl \
+   libtool \
+   ninja-build \
+   patch \
+   python3-pip \
+   unzip \
+   virtualenv
+```
 
 ### 2.2 Build
 
