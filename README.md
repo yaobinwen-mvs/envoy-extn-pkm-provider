@@ -58,3 +58,14 @@ sudo apt-get install \
 * the envoyproxy instance listening on port 10000 further connects to the target server
   initiating TLS connection using the certificate specified in the config file and uses TPM
   for private key operations.
+
+## 6. TODOs
+
+Need to use [protoc 3.21.12](https://github.com/protocolbuffers/protobuf/releases/tag/v3.21.12) to compile the `.proto` files. The pre-compiled binary can be found on their [Maven repository](https://repo1.maven.org/maven2/com/google/protobuf/protoc/3.21.12/).
+
+```
+pkm_provider_config.pb.h:17:49: note: '#pragma message: PROTOBUF_VERSION=3021012'
+   17 | #pragma message(VAR_NAME_VALUE(PROTOBUF_VERSION))
+      |                                                 ^
+pkm_provider_config.pb.h:25:60: note: '#pragma message: PROTOBUF_MIN_PROTOC_VERSION=3021000'
+```

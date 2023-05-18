@@ -14,48 +14,54 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace pkm {
-class PKMProviderConfigDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PKMProviderConfig> _instance;
-} _PKMProviderConfig_default_instance_;
+PROTOBUF_CONSTEXPR PKMProviderConfig::PKMProviderConfig(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.idkey_file_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.idkey_auth_type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.idkey_auth_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.srk_auth_type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.srk_auth_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct PKMProviderConfigDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PKMProviderConfigDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PKMProviderConfigDefaultTypeInternal() {}
+  union {
+    PKMProviderConfig _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PKMProviderConfigDefaultTypeInternal _PKMProviderConfig_default_instance_;
 }  // namespace pkm
-static void InitDefaultsscc_info_PKMProviderConfig_pkm_5fprovider_5fconfig_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_pkm_5fprovider_5fconfig_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_pkm_5fprovider_5fconfig_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_pkm_5fprovider_5fconfig_2eproto = nullptr;
 
-  {
-    void* ptr = &::pkm::_PKMProviderConfig_default_instance_;
-    new (ptr) ::pkm::PKMProviderConfig();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::pkm::PKMProviderConfig::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PKMProviderConfig_pkm_5fprovider_5fconfig_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PKMProviderConfig_pkm_5fprovider_5fconfig_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_pkm_5fprovider_5fconfig_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_pkm_5fprovider_5fconfig_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_pkm_5fprovider_5fconfig_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_pkm_5fprovider_5fconfig_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_pkm_5fprovider_5fconfig_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::pkm::PKMProviderConfig, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::pkm::PKMProviderConfig, idkey_file_),
-  PROTOBUF_FIELD_OFFSET(::pkm::PKMProviderConfig, idkey_auth_type_),
-  PROTOBUF_FIELD_OFFSET(::pkm::PKMProviderConfig, idkey_auth_),
-  PROTOBUF_FIELD_OFFSET(::pkm::PKMProviderConfig, srk_auth_type_),
-  PROTOBUF_FIELD_OFFSET(::pkm::PKMProviderConfig, srk_auth_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::pkm::PKMProviderConfig, _impl_.idkey_file_),
+  PROTOBUF_FIELD_OFFSET(::pkm::PKMProviderConfig, _impl_.idkey_auth_type_),
+  PROTOBUF_FIELD_OFFSET(::pkm::PKMProviderConfig, _impl_.idkey_auth_),
+  PROTOBUF_FIELD_OFFSET(::pkm::PKMProviderConfig, _impl_.srk_auth_type_),
+  PROTOBUF_FIELD_OFFSET(::pkm::PKMProviderConfig, _impl_.srk_auth_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::pkm::PKMProviderConfig)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::pkm::PKMProviderConfig)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::pkm::_PKMProviderConfig_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::pkm::_PKMProviderConfig_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_pkm_5fprovider_5fconfig_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -65,204 +71,247 @@ const char descriptor_table_protodef_pkm_5fprovider_5fconfig_2eproto[] PROTOBUF_
   "\n\rsrk_auth_type\030\004 \001(\t\022\020\n\010srk_auth\030\005 \001(\tb"
   "\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_pkm_5fprovider_5fconfig_2eproto_deps[1] = {
+static ::_pbi::once_flag descriptor_table_pkm_5fprovider_5fconfig_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_pkm_5fprovider_5fconfig_2eproto = {
+    false, false, 167, descriptor_table_protodef_pkm_5fprovider_5fconfig_2eproto,
+    "pkm_provider_config.proto",
+    &descriptor_table_pkm_5fprovider_5fconfig_2eproto_once, nullptr, 0, 1,
+    schemas, file_default_instances, TableStruct_pkm_5fprovider_5fconfig_2eproto::offsets,
+    file_level_metadata_pkm_5fprovider_5fconfig_2eproto, file_level_enum_descriptors_pkm_5fprovider_5fconfig_2eproto,
+    file_level_service_descriptors_pkm_5fprovider_5fconfig_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pkm_5fprovider_5fconfig_2eproto_sccs[1] = {
-  &scc_info_PKMProviderConfig_pkm_5fprovider_5fconfig_2eproto.base,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_pkm_5fprovider_5fconfig_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_pkm_5fprovider_5fconfig_2eproto = {
-  false, false, descriptor_table_protodef_pkm_5fprovider_5fconfig_2eproto, "pkm_provider_config.proto", 167,
-  &descriptor_table_pkm_5fprovider_5fconfig_2eproto_once, descriptor_table_pkm_5fprovider_5fconfig_2eproto_sccs, descriptor_table_pkm_5fprovider_5fconfig_2eproto_deps, 1, 0,
-  schemas, file_default_instances, TableStruct_pkm_5fprovider_5fconfig_2eproto::offsets,
-  file_level_metadata_pkm_5fprovider_5fconfig_2eproto, 1, file_level_enum_descriptors_pkm_5fprovider_5fconfig_2eproto, file_level_service_descriptors_pkm_5fprovider_5fconfig_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_pkm_5fprovider_5fconfig_2eproto_getter() {
+  return &descriptor_table_pkm_5fprovider_5fconfig_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_pkm_5fprovider_5fconfig_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_pkm_5fprovider_5fconfig_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_pkm_5fprovider_5fconfig_2eproto(&descriptor_table_pkm_5fprovider_5fconfig_2eproto);
 namespace pkm {
 
 // ===================================================================
 
-void PKMProviderConfig::InitAsDefaultInstance() {
-}
 class PKMProviderConfig::_Internal {
  public:
 };
 
-PKMProviderConfig::PKMProviderConfig(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+PKMProviderConfig::PKMProviderConfig(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:pkm.PKMProviderConfig)
 }
 PKMProviderConfig::PKMProviderConfig(const PKMProviderConfig& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PKMProviderConfig* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.idkey_file_){}
+    , decltype(_impl_.idkey_auth_type_){}
+    , decltype(_impl_.idkey_auth_){}
+    , decltype(_impl_.srk_auth_type_){}
+    , decltype(_impl_.srk_auth_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  idkey_file_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.idkey_file_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.idkey_file_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_idkey_file().empty()) {
-    idkey_file_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_idkey_file(),
-      GetArena());
+    _this->_impl_.idkey_file_.Set(from._internal_idkey_file(), 
+      _this->GetArenaForAllocation());
   }
-  idkey_auth_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.idkey_auth_type_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.idkey_auth_type_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_idkey_auth_type().empty()) {
-    idkey_auth_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_idkey_auth_type(),
-      GetArena());
+    _this->_impl_.idkey_auth_type_.Set(from._internal_idkey_auth_type(), 
+      _this->GetArenaForAllocation());
   }
-  idkey_auth_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.idkey_auth_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.idkey_auth_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_idkey_auth().empty()) {
-    idkey_auth_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_idkey_auth(),
-      GetArena());
+    _this->_impl_.idkey_auth_.Set(from._internal_idkey_auth(), 
+      _this->GetArenaForAllocation());
   }
-  srk_auth_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.srk_auth_type_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.srk_auth_type_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_srk_auth_type().empty()) {
-    srk_auth_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_srk_auth_type(),
-      GetArena());
+    _this->_impl_.srk_auth_type_.Set(from._internal_srk_auth_type(), 
+      _this->GetArenaForAllocation());
   }
-  srk_auth_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.srk_auth_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.srk_auth_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_srk_auth().empty()) {
-    srk_auth_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_srk_auth(),
-      GetArena());
+    _this->_impl_.srk_auth_.Set(from._internal_srk_auth(), 
+      _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:pkm.PKMProviderConfig)
 }
 
-void PKMProviderConfig::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PKMProviderConfig_pkm_5fprovider_5fconfig_2eproto.base);
-  idkey_file_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  idkey_auth_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  idkey_auth_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  srk_auth_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  srk_auth_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void PKMProviderConfig::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.idkey_file_){}
+    , decltype(_impl_.idkey_auth_type_){}
+    , decltype(_impl_.idkey_auth_){}
+    , decltype(_impl_.srk_auth_type_){}
+    , decltype(_impl_.srk_auth_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.idkey_file_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.idkey_file_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.idkey_auth_type_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.idkey_auth_type_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.idkey_auth_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.idkey_auth_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.srk_auth_type_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.srk_auth_type_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.srk_auth_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.srk_auth_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 PKMProviderConfig::~PKMProviderConfig() {
   // @@protoc_insertion_point(destructor:pkm.PKMProviderConfig)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PKMProviderConfig::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  idkey_file_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  idkey_auth_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  idkey_auth_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  srk_auth_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  srk_auth_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void PKMProviderConfig::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.idkey_file_.Destroy();
+  _impl_.idkey_auth_type_.Destroy();
+  _impl_.idkey_auth_.Destroy();
+  _impl_.srk_auth_type_.Destroy();
+  _impl_.srk_auth_.Destroy();
 }
 
-void PKMProviderConfig::ArenaDtor(void* object) {
-  PKMProviderConfig* _this = reinterpret_cast< PKMProviderConfig* >(object);
-  (void)_this;
-}
-void PKMProviderConfig::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void PKMProviderConfig::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const PKMProviderConfig& PKMProviderConfig::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PKMProviderConfig_pkm_5fprovider_5fconfig_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PKMProviderConfig::Clear() {
 // @@protoc_insertion_point(message_clear_start:pkm.PKMProviderConfig)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  idkey_file_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  idkey_auth_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  idkey_auth_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  srk_auth_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  srk_auth_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _impl_.idkey_file_.ClearToEmpty();
+  _impl_.idkey_auth_type_.ClearToEmpty();
+  _impl_.idkey_auth_.ClearToEmpty();
+  _impl_.srk_auth_type_.ClearToEmpty();
+  _impl_.srk_auth_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* PKMProviderConfig::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* PKMProviderConfig::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string idkey_file = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_idkey_file();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "pkm.PKMProviderConfig.idkey_file"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "pkm.PKMProviderConfig.idkey_file"));
+        } else
+          goto handle_unusual;
         continue;
       // string idkey_auth_type = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_idkey_auth_type();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "pkm.PKMProviderConfig.idkey_auth_type"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "pkm.PKMProviderConfig.idkey_auth_type"));
+        } else
+          goto handle_unusual;
         continue;
       // string idkey_auth = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_idkey_auth();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "pkm.PKMProviderConfig.idkey_auth"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "pkm.PKMProviderConfig.idkey_auth"));
+        } else
+          goto handle_unusual;
         continue;
       // string srk_auth_type = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_srk_auth_type();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "pkm.PKMProviderConfig.srk_auth_type"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "pkm.PKMProviderConfig.srk_auth_type"));
+        } else
+          goto handle_unusual;
         continue;
       // string srk_auth = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_srk_auth();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "pkm.PKMProviderConfig.srk_auth"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "pkm.PKMProviderConfig.srk_auth"));
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PKMProviderConfig::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* PKMProviderConfig::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:pkm.PKMProviderConfig)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string idkey_file = 1;
-  if (this->idkey_file().size() > 0) {
+  if (!this->_internal_idkey_file().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_idkey_file().data(), static_cast<int>(this->_internal_idkey_file().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -272,7 +321,7 @@ failure:
   }
 
   // string idkey_auth_type = 2;
-  if (this->idkey_auth_type().size() > 0) {
+  if (!this->_internal_idkey_auth_type().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_idkey_auth_type().data(), static_cast<int>(this->_internal_idkey_auth_type().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -282,7 +331,7 @@ failure:
   }
 
   // string idkey_auth = 3;
-  if (this->idkey_auth().size() > 0) {
+  if (!this->_internal_idkey_auth().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_idkey_auth().data(), static_cast<int>(this->_internal_idkey_auth().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -292,7 +341,7 @@ failure:
   }
 
   // string srk_auth_type = 4;
-  if (this->srk_auth_type().size() > 0) {
+  if (!this->_internal_srk_auth_type().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_srk_auth_type().data(), static_cast<int>(this->_internal_srk_auth_type().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -302,7 +351,7 @@ failure:
   }
 
   // string srk_auth = 5;
-  if (this->srk_auth().size() > 0) {
+  if (!this->_internal_srk_auth().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_srk_auth().data(), static_cast<int>(this->_internal_srk_auth().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -312,7 +361,7 @@ failure:
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:pkm.PKMProviderConfig)
@@ -323,98 +372,79 @@ size_t PKMProviderConfig::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:pkm.PKMProviderConfig)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string idkey_file = 1;
-  if (this->idkey_file().size() > 0) {
+  if (!this->_internal_idkey_file().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_idkey_file());
   }
 
   // string idkey_auth_type = 2;
-  if (this->idkey_auth_type().size() > 0) {
+  if (!this->_internal_idkey_auth_type().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_idkey_auth_type());
   }
 
   // string idkey_auth = 3;
-  if (this->idkey_auth().size() > 0) {
+  if (!this->_internal_idkey_auth().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_idkey_auth());
   }
 
   // string srk_auth_type = 4;
-  if (this->srk_auth_type().size() > 0) {
+  if (!this->_internal_srk_auth_type().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_srk_auth_type());
   }
 
   // string srk_auth = 5;
-  if (this->srk_auth().size() > 0) {
+  if (!this->_internal_srk_auth().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_srk_auth());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void PKMProviderConfig::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:pkm.PKMProviderConfig)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PKMProviderConfig* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PKMProviderConfig>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:pkm.PKMProviderConfig)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:pkm.PKMProviderConfig)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PKMProviderConfig::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PKMProviderConfig::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PKMProviderConfig::GetClassData() const { return &_class_data_; }
 
-void PKMProviderConfig::MergeFrom(const PKMProviderConfig& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:pkm.PKMProviderConfig)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void PKMProviderConfig::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PKMProviderConfig*>(&to_msg);
+  auto& from = static_cast<const PKMProviderConfig&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:pkm.PKMProviderConfig)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.idkey_file().size() > 0) {
-    _internal_set_idkey_file(from._internal_idkey_file());
+  if (!from._internal_idkey_file().empty()) {
+    _this->_internal_set_idkey_file(from._internal_idkey_file());
   }
-  if (from.idkey_auth_type().size() > 0) {
-    _internal_set_idkey_auth_type(from._internal_idkey_auth_type());
+  if (!from._internal_idkey_auth_type().empty()) {
+    _this->_internal_set_idkey_auth_type(from._internal_idkey_auth_type());
   }
-  if (from.idkey_auth().size() > 0) {
-    _internal_set_idkey_auth(from._internal_idkey_auth());
+  if (!from._internal_idkey_auth().empty()) {
+    _this->_internal_set_idkey_auth(from._internal_idkey_auth());
   }
-  if (from.srk_auth_type().size() > 0) {
-    _internal_set_srk_auth_type(from._internal_srk_auth_type());
+  if (!from._internal_srk_auth_type().empty()) {
+    _this->_internal_set_srk_auth_type(from._internal_srk_auth_type());
   }
-  if (from.srk_auth().size() > 0) {
-    _internal_set_srk_auth(from._internal_srk_auth());
+  if (!from._internal_srk_auth().empty()) {
+    _this->_internal_set_srk_auth(from._internal_srk_auth());
   }
-}
-
-void PKMProviderConfig::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:pkm.PKMProviderConfig)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void PKMProviderConfig::CopyFrom(const PKMProviderConfig& from) {
@@ -430,23 +460,42 @@ bool PKMProviderConfig::IsInitialized() const {
 
 void PKMProviderConfig::InternalSwap(PKMProviderConfig* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  idkey_file_.Swap(&other->idkey_file_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  idkey_auth_type_.Swap(&other->idkey_auth_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  idkey_auth_.Swap(&other->idkey_auth_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  srk_auth_type_.Swap(&other->srk_auth_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  srk_auth_.Swap(&other->srk_auth_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.idkey_file_, lhs_arena,
+      &other->_impl_.idkey_file_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.idkey_auth_type_, lhs_arena,
+      &other->_impl_.idkey_auth_type_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.idkey_auth_, lhs_arena,
+      &other->_impl_.idkey_auth_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.srk_auth_type_, lhs_arena,
+      &other->_impl_.srk_auth_type_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.srk_auth_, lhs_arena,
+      &other->_impl_.srk_auth_, rhs_arena
+  );
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PKMProviderConfig::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_pkm_5fprovider_5fconfig_2eproto_getter, &descriptor_table_pkm_5fprovider_5fconfig_2eproto_once,
+      file_level_metadata_pkm_5fprovider_5fconfig_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace pkm
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::pkm::PKMProviderConfig* Arena::CreateMaybeMessage< ::pkm::PKMProviderConfig >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::pkm::PKMProviderConfig*
+Arena::CreateMaybeMessage< ::pkm::PKMProviderConfig >(Arena* arena) {
   return Arena::CreateMessageInternal< ::pkm::PKMProviderConfig >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
