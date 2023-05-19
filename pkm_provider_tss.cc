@@ -274,8 +274,12 @@ TssPKMPrivateKeyMethodProviderInstanceFactory::createPrivateKeyMethodProviderIns
     const envoy::extensions::transport_sockets::tls::v3::PrivateKeyProvider& config,
     Server::Configuration::TransportSocketFactoryContext& private_key_method_provider_context) {
 
+  pkm::PKMProviderConfig pkm_provider_config;
+
+  // TODO(ywen): Implement me!
+
   return PrivateKeyMethodProviderSharedPtr(
-      new TssPKMPrivateKeyMethodProvider(config, private_key_method_provider_context));
+      new TssPKMPrivateKeyMethodProvider(pkm_provider_config, private_key_method_provider_context));
 }
 
 
