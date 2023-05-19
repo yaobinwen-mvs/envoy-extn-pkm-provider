@@ -38,7 +38,7 @@ static RSA* get_rsa_object(TSS_HKEY hKey) {
   }
 
   result = Tspi_GetAttribData(hKey, TSS_TSPATTRIB_RSAKEY_INFO,
-                              TSS_TSPATTRIB_KEYINFO_RSA_EXPONENT, &e_size, &e)
+                              TSS_TSPATTRIB_KEYINFO_RSA_EXPONENT, &e_size, &e);
   if (result) {
     ENVOY_LOG_MISC(error, "Tspi_GetAttribData (TSS_TSPATTRIB_KEYINFO_RSA_EXPONENT) returned: {}",
                    result);
