@@ -29,15 +29,17 @@ static RSA* get_rsa_object(TSS_HKEY hKey) {
   UINT32 m_size, e_size;
   BYTE *m, *e;
 
-  if (result = Tspi_GetAttribData(hKey, TSS_TSPATTRIB_RSAKEY_INFO,
-                                  TSS_TSPATTRIB_KEYINFO_RSA_MODULUS, &m_size, &m)) {
+  result = Tspi_GetAttribData(hKey, TSS_TSPATTRIB_RSAKEY_INFO,
+                              TSS_TSPATTRIB_KEYINFO_RSA_MODULUS, &m_size, &m);
+  if (result) {
     ENVOY_LOG_MISC(error, "Tspi_GetAttribData (TSS_TSPATTRIB_KEYINFO_RSA_MODULUS) returned: {}",
                    result);
     return NULL;
   }
 
-  if (result = Tspi_GetAttribData(hKey, TSS_TSPATTRIB_RSAKEY_INFO,
-                                  TSS_TSPATTRIB_KEYINFO_RSA_EXPONENT, &e_size, &e)) {
+  result = Tspi_GetAttribData(hKey, TSS_TSPATTRIB_RSAKEY_INFO,
+                              TSS_TSPATTRIB_KEYINFO_RSA_EXPONENT, &e_size, &e)
+  if (result) {
     ENVOY_LOG_MISC(error, "Tspi_GetAttribData (TSS_TSPATTRIB_KEYINFO_RSA_EXPONENT) returned: {}",
                    result);
     return NULL;
@@ -215,6 +217,7 @@ TssPKMPrivateKeyMethodProvider::TssPKMPrivateKeyMethodProvider(
   std::string srk_auth;
   uint8_t srk_auth_sha1[SHA_DIGEST_LENGTH];
 
+  UNREFERENCED_PARAMETER(config);
   /**
    * TODO(ywen): Modify this part of code.
   for (auto& value_it : config.fields()) {
