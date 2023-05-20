@@ -61,7 +61,9 @@ sudo apt-get install \
 
 ## 6. TODOs
 
-Need to use [protoc 3.21.12](https://github.com/protocolbuffers/protobuf/releases/tag/v3.21.12) to compile the `.proto` files. The pre-compiled binary can be found on their [Maven repository](https://repo1.maven.org/maven2/com/google/protobuf/protoc/3.21.12/).
+### 6.1 Figure out how to compile pkm_provider_config.proto via Bazel
+
+One more note: Need to use [protoc 3.21.12](https://github.com/protocolbuffers/protobuf/releases/tag/v3.21.12) to compile the `.proto` files. The pre-compiled binary can be found on their [Maven repository](https://repo1.maven.org/maven2/com/google/protobuf/protoc/3.21.12/).
 
 ```
 pkm_provider_config.pb.h:17:49: note: '#pragma message: PROTOBUF_VERSION=3021012'
