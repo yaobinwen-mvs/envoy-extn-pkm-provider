@@ -1,0 +1,17 @@
+{
+    "resources": [
+        {
+            "@type": "type.googleapis.com/envoy.config.cluster.v3.Cluster",
+            "connect_timeout": "1s",
+            "eds_cluster_config": {
+                "eds_config": {
+                    "path": "xDS/endpoints/apache-server.json",
+                    "resource_api_version": "V3"
+                }
+            },
+            "name": "apache-server",
+            "type": "EDS"
+        }
+    ],
+    "version_info": "4fc4d7e994bdfef3bf8d7c6357b215037a0eed24/1.26.1/Clean/DEBUG/BoringSSL"
+}

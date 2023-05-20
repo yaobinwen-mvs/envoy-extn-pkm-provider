@@ -1,0 +1,28 @@
+{
+    "resources": [
+        {
+            "@type": "type.googleapis.com/envoy.config.route.v3.RouteConfiguration",
+            "name": "main_route_table",
+            "virtual_hosts": [
+                {
+                    "domains": [
+                        "*"
+                    ],
+                    "name": "*",
+                    "routes": [
+                        {
+                            "match": {
+                                "prefix": "/apache/"
+                            },
+                            "route": {
+                                "cluster": "apache-server",
+                                "prefix_rewrite": "/"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "version_info": "4fc4d7e994bdfef3bf8d7c6357b215037a0eed24/1.26.1/Clean/DEBUG/BoringSSL"
+}
