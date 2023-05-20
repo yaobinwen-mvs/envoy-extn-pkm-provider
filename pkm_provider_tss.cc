@@ -207,19 +207,17 @@ TssPKMPrivateKeyMethodProvider::TssPKMPrivateKeyMethodProvider(
         SSL_get_ex_new_index(0, nullptr, nullptr, nullptr, nullptr);
   }
 
-  std::string idkey_file_path;
+  std::string idkey_file_path(config.idkey_file());
   std::string idkey_contents;
-  std::string idkey_auth_type;
-  std::string idkey_auth;
+  std::string idkey_auth_type(config.idkey_auth_type());
+  std::string idkey_auth(config.idkey_auth());
   uint8_t idkey_auth_sha1[SHA_DIGEST_LENGTH];
 
-  std::string srk_auth_type;
-  std::string srk_auth;
+  std::string srk_auth_type(config.srk_auth_type());
+  std::string srk_auth(config.srk_auth());
   uint8_t srk_auth_sha1[SHA_DIGEST_LENGTH];
 
-  UNREFERENCED_PARAMETER(config);
   /**
-   * TODO(ywen): Modify this part of code.
   for (auto& value_it : config.fields()) {
     auto& value = value_it.second;
 
@@ -277,9 +275,10 @@ TssPKMPrivateKeyMethodProviderInstanceFactory::createPrivateKeyMethodProviderIns
     const envoy::extensions::transport_sockets::tls::v3::PrivateKeyProvider& config,
     Server::Configuration::TransportSocketFactoryContext& private_key_method_provider_context) {
 
-  pkm::PKMProviderConfig pkm_provider_config;
+  const ::google::protobuf::Any & any = config.typed_config();
 
-  // TODO(ywen): Implement me!
+  pkm::PKMProviderConfig pkm_provider_config;
+  any.UnpackTo(&pkm_provider_config);
 
   return PrivateKeyMethodProviderSharedPtr(
       new TssPKMPrivateKeyMethodProvider(pkm_provider_config, private_key_method_provider_context));
