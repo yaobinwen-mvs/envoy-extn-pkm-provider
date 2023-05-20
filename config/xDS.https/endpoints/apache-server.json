@@ -1,0 +1,25 @@
+{
+    "resources": [
+        {
+            "@type": "type.googleapis.com/envoy.config.endpoint.v3.ClusterLoadAssignment",
+            "cluster_name": "apache-server",
+            "endpoints": [
+                {
+                    "lb_endpoints": [
+                        {
+                            "endpoint": {
+                                "address": {
+                                    "socket_address": {
+                                        "address": "127.0.0.1",
+                                        "port_value": 32774
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "version_info": "13105b7c332db3ceb8a975e661a36f67ffd0e0f0/1.26.1/Clean/DEBUG/BoringSSL"
+}
