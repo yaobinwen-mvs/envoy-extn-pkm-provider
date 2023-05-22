@@ -71,3 +71,7 @@ pkm_provider_config.pb.h:17:49: note: '#pragma message: PROTOBUF_VERSION=3021012
       |                                                 ^
 pkm_provider_config.pb.h:25:60: note: '#pragma message: PROTOBUF_MIN_PROTOC_VERSION=3021000'
 ```
+
+### 6.2 Bugs
+
+See the sub-directory `debug`. The issues are sorted in the order I ran into them.
