@@ -11,6 +11,9 @@ new_local_repository(
     build_file = "tspi.BUILD"
 )
 
+# NOTE(ywen): The dependencies need to keep synchronized with `envoy/WORKSPACE`.
+# Otherwise there may be build errors about missing dependencies.
+
 load("@envoy//bazel:api_binding.bzl", "envoy_api_binding")
 
 envoy_api_binding()
